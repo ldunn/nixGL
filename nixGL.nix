@@ -76,7 +76,9 @@ let
           inherit version;
           src = let
             url =
-              if stdenv.isx86_64 then
+              if version == "570.133.20" then
+                "https://us.download.nvidia.com/tesla/570.133.20/NVIDIA-Linux-x86_64-570.133.20.run"
+              else if stdenv.isx86_64 then
                 "https://download.nvidia.com/XFree86/Linux-x86_64/${version}/NVIDIA-Linux-x86_64-${version}.run"
               else if stdenv.isAarch64 then
                 "https://us.download.nvidia.com/XFree86/aarch64/${version}/NVIDIA-Linux-aarch64-${version}.run"
