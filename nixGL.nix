@@ -16,7 +16,7 @@ enable32bits ? stdenv.hostPlatform.isx86
 , stdenv, writeTextFile, shellcheck, pcre, runCommand, linuxPackages
 , fetchurl, lib, runtimeShell, bumblebee, libglvnd, vulkan-validation-layers
 , mesa, libvdpau-va-gl, intel-media-driver, pkgsi686Linux, driversi686Linux
-, zlib, libdrm, libX11, libxcb, libxshmfence, wayland, gcc, zstd }:
+, zlib, libdrm, libx11, libxcb, libxshmfence, wayland, gcc, zstd }:
 
 let
   writeExecutable = { name, text }:
